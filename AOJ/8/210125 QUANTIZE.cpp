@@ -29,9 +29,8 @@ int quantize(int start, int num_left) {
     if(num_left == 0) return MAXNUM;
     int& ret = cache[start][num_left];
     if(ret != -1) return ret;
-    if(num_left == 1) return ret = mse(start, seq.size(), mean(start, seq.size()));
     ret = MAXNUM;
-    for(int i = start + 1; i < seq.size(); ++i) {
+    for(int i = start + 1; i <= seq.size(); ++i) {
         ret = min(ret, mse(start, i, mean(start, i)) + quantize(i, num_left - 1));
     }
     return ret;
