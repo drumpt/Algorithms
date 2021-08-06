@@ -6,5 +6,5 @@ This repository is for learning algorithms and solving algorithm problems. Most 
 ## Language
 C++
 
-## Envrionments
+## Environments
 Clang 12.0.0
